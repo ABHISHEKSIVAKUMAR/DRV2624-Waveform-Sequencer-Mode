@@ -1,0 +1,34 @@
+menu "Prototype Configuration"
+
+    config DRV2624_RUN_CALIBRATION
+        bool "Run DRV2624 calibration?"
+        help
+            Choose if calibration sequence for the vibration motor has to run or not
+    
+    config VIBRATION_MOTOR_RES_COMP
+        int "Motor Resistive Component"
+        default 13
+        range 0 255
+        help
+            Enter the motor's resistive component obtained after performing calibration sequence
+    
+    config FEEDBACK_GAIN
+        int "Motor Feedback Gain"
+        default 109
+        range 0 255
+        help
+            Enter the motor's feedback gain obtained after performing calibration sequence
+    
+    config BACKEMF_GAIN
+        int "Motor BackEMF Gain"
+        default 2
+        range 0 3
+        help
+            Enter the motor's backEMF gain obtained after performing calibration sequence
+
+    config RTP_WAVEFORM_MODE
+        bool "Set the device to work in RTP mode or Waveform Sequencer mode"
+        default 1
+        help
+            Choose 1 for RTP mode and 0 for waveform sequencer mode for the vibration motor control
+endmenu
