@@ -1,4 +1,4 @@
-DRV2624 Waveform Sequencer and RAM Operations
+DRV2624 Waveform Sequencer and RAM Operations:
 This document explains how the DRV2624 haptic driver's waveform sequencer works, with emphasis on internal RAM operations, sequencing, and programming flow. Illustrations and diagrams from TI documentation are included where possible for clarity.
 1. Overview of Sequencer Mode
 The DRV2624 haptic driver includes a waveform sequencer engine that allows multiple vibration effects to be pre-programmed and executed in sequence with a single trigger. The sequencer reads waveform definitions stored in internal RAM and plays them back in the programmed order, reducing I²C traffic and host MCU burden.
@@ -49,4 +49,5 @@ Seq1 = Ramp-up → Seq2 = Buzz → Seq3 = Ramp-down
 
 Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
 They are not used or needed when building with CMake and idf.py.
+
 
